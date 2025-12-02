@@ -4,17 +4,17 @@
  * main - prints the alphabet in lowercase
  *
  * Return: Always 0.
-
  */
+
+
 int main(void)
 {
-    char c;
+	char c;
 
-    for(c = 'a'; c < 'z'; c++)
-    {
-        putchar(c);
-    }
-    putchar("\n");
+	for (c = 'a'; c <= 'z'; c++)
+		putchar(c);
 
-    return(0);
+	putchar('\n');
+
+	return (0);
 }
