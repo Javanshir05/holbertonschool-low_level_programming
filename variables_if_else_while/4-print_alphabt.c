@@ -10,11 +10,13 @@ int main(void)
 	char c;
 
 	for (c = 'a'; c <= 'z'; c++)
+    {
         while (c == 'q' || c== 'e')
-            break;
-        putchar(c)
-
-    putchar("\n");
+            continue;
+        putchar(c);
+    }
+    
+    putchar('\n');
 
 	return (0);
 }
