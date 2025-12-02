@@ -13,10 +13,10 @@ int main(void)
     {
         if (c == 'q' || c== 'e')
             continue;
+        
         putchar(c);
     }
 
     putchar('\n');
-
 	return (0);
 }
