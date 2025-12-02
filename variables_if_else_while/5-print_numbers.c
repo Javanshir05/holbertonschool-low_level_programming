@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - prints all single digit numbers from 0
+ * main - prints single digit numbers from 0 to 9
  *
  * Return: Always 0.
  */
