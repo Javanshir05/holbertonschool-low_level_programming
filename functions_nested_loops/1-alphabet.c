@@ -1,24 +1,26 @@
 #include <stdio.h>
 
 /**
- * main - Prints the alphabet, in lowercase
- *
- * Return: Always 0
+ * print_alphabet - Prints the alphabet in lowercase, followed by a new line
  */
 void print_alphabet(void)
 {
-    char c;
+	char c;
 
-    for (c = 'a'; c <= 'z'; c++)
-    {
-        putchar(c);
-    }
-
-    putchar('\n');
+	for (c = 'a'; c <= 'z'; c++)
+	{
+		putchar(c);
+	}
+	putchar('\n');
 }
 
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-    print_alphabet();
-    return 0;
+	print_alphabet();
+	return (0);
 }
