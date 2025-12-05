@@ -18,11 +18,9 @@ void print_triangle(int size)
 
 	for (i = 1; i <= size; i++)
 	{
-		/* print leading spaces */
 		for (j = size - i; j > 0; j--)
 			_putchar(' ');
 
-		/* print #'s */
 		for (k = 0; k < i; k++)
 			_putchar('#');
 
