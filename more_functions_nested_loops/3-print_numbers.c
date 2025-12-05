@@ -1,12 +1,9 @@
+/* print_numbers.c */
 #include "main.h"
 #include <stdio.h>
 
 /**
- * mul - multiplies two integers
- * @a: first integer
- * @b: second integer
- *
- * Return: the product of a and b
+ * print_numbers - prints the numbers, from 0 to 9
  */
 void print_numbers(void)
 {
