@@ -12,5 +12,5 @@ int mul(int a, int b)
 
     printf("%d", result);
 
-	return 0;
+	return (result);
 }
