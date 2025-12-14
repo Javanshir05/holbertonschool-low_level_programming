@@ -3,10 +3,10 @@
 /**
  * _strpbrk - searches a string for any of a set of bytes
  * @s: string to search
- * @accept: string containing bytes to match
+ * @accept: string containing characters to match
  *
- * Return: pointer to the first occurrence in s of any byte from accept,
- *         or NULL if no such byte is found
+ * Return: pointer to the first occurrence in s of any character from accept,
+ *         or NULL if no such character is found
  */
 char *_strpbrk(char *s, char *accept)
 {
@@ -21,5 +21,5 @@ char *_strpbrk(char *s, char *accept)
 		}
 	}
 
-	return (NULL);
+	return (0);
 }
