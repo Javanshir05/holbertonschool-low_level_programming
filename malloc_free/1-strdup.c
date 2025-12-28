@@ -6,28 +6,25 @@
  * @str: string to duplicate
  *
  * Return: pointer to duplicated string, or NULL if str is NULL
- *         or if memory allocation fails
+ * or if memory allocation fails
  */
 char *_strdup(char *str)
 {
-    char *dup;
-    unsigned int i, len = 0;
+	char *dup;
+	unsigned int i, len = 0;
 
-    if (str == NULL)
-        return (NULL);
+	if (str == NULL)
+		return (NULL);
 
-    /* Find length of string */
-    while (str[len] != '\0')
-        len++;
+	while (str[len] != '\0')
+		len++;
 
-    /* Allocate memory (+1 for null terminator) */
-    dup = malloc(sizeof(char) * (len + 1));
-    if (dup == NULL)
-        return (NULL);
+	dup = malloc(sizeof(char) * (len + 1));
+	if (dup == NULL)
+		return (NULL);
 
-    /* Copy string */
-    for (i = 0; i <= len; i++)
-        dup[i] = str[i];
+	for (i = 0; i <= len; i++)
+		dup[i] = str[i];
 
-    return (dup);
+	return (dup);
 }
