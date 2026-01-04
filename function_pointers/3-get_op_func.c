@@ -2,10 +2,10 @@
 #include <stddef.h>
 
 /**
- * get_op_func - selects the correct operation function
+ * get_op_func - selects the correct function to perform the operation
  * @s: operator passed as argument
  *
- * Return: pointer to the function, or NULL if not found
+ * Return: pointer to the function that corresponds to s, or NULL if not found
  */
 int (*get_op_func(char *s))(int, int)
 {
@@ -17,13 +17,15 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
-	int i = 0;
+	int i;
 
-	while (ops[i].op)
+	i = 0;
+	while (ops[i].op != NULL)
 	{
 		if (s[0] == ops[i].op[0] && s[1] == '\0')
 			return (ops[i].f);
 		i++;
 	}
+
 	return (NULL);
 }
