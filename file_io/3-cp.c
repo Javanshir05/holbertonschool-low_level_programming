@@ -7,16 +7,16 @@
 
 /**
  * main - copies the content of a file to another file
- * @ac: argument count
- * @av: argument vector
+ * @ac: number of arguments
+ * @av: array of arguments
  *
- * Return: 0 on success, exits with specific codes on failure
+ * Return: 0 on success, exits with error codes on failure
  */
 int main(int ac, char **av)
 {
 	int fd_from, fd_to;
 	ssize_t r, w;
-	char buf[BUF_SIZE];
+	char buffer[BUF_SIZE];
 
 	if (ac != 3)
 	{
@@ -41,9 +41,9 @@ int main(int ac, char **av)
 		exit(99);
 	}
 
-	while ((r = read(fd_from, buf, BUF_SIZE)) > 0)
+	while ((r = read(fd_from, buffer, BUF_SIZE)) > 0)
 	{
-		w = write(fd_to, buf, r);
+		w = write(fd_to, buffer, r);
 		if (w == -1 || w != r)
 		{
 			dprintf(STDERR_FILENO,
