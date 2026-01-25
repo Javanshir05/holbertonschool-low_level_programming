@@ -17,11 +17,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
 		return (0);
-
 	index = key_index((const unsigned char *)key, ht->size);
 	current = ht->array[index];
-
-	/* Check if key already exists and update */
 	while (current)
 	{
 		if (strcmp(current->key, key) == 0)
@@ -34,12 +31,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		}
 		current = current->next;
 	}
-
-	/* Key not found, create new node */
 	new_node = malloc(sizeof(hash_node_t));
 	if (new_node == NULL)
 		return (0);
-
 	new_node->key = strdup(key);
 	if (new_node->key == NULL)
 	{
